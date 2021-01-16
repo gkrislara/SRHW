@@ -1,0 +1,32 @@
+{
+  "param":
+  {
+    "SRHW::Conv1.weight":[8,6],
+    "SRHW::DWConv1.weight":[8,4],
+    "SRHW::PWConv1.weight":[8,5],
+    "SRHW::DWConv2.weight":[8,5],
+    "SRHW::PWConv2.weight":[8,5],
+    "SRHW::DWConv3.weight":[8,6],
+    "SRHW::PWConv3.weight":[8,7],
+    "SRHW::DWConv4.weight":[8,7],
+    "SRHW::PWConv4.weight":[8,7]
+  },
+  "output":
+  {
+    "SRHW::input_0":[8,6],
+    "SRHW::SRHW/ReLU[relu]/input.3":[8,5],
+    "SRHW::SRHW/Conv2d[DWConv1]/input.4":[8,6],
+    "SRHW::SRHW/ReLU[relu]/input.6":[8,6],
+    "SRHW::SRHW/Conv2d[DWConv2]/input.7":[8,6],
+    "SRHW::SRHW/Conv2d[PWConv2]/66":[8,6],
+    "SRHW::SRHW/ReLU[relu]/input.9":[8,6],
+    "SRHW::SRHW/Conv2d[DWConv3]/input.10":[8,6],
+    "SRHW::SRHW/ReLU[relu]/input.12":[8,6],
+    "SRHW::SRHW/Conv2d[DWConv4]/input":[8,6],
+    "SRHW::SRHW/Conv2d[PWConv4]/114":[8,7]
+  },
+  "input":
+  {
+
+  }
+}
