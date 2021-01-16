@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "SRHW.xmodel",
+    "kernel": [
+        "subgraph_SRHW__Conv1_weight"
+    ],
+    "target": "DPUCZDX8G_ISA0_B4096_MAX_BG2"
+}
