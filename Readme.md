@@ -29,7 +29,7 @@ For iteration 1 refer [Edge Inference of Image Super Resolution Deep Learning Mo
 This documentation describes the state the repo and is divided into four sections
 
 1. [Training](#markdown-header-training)
-2. [Quantization](#markdown-header-quantization)
+2. [Quantization](#quantization)
 3. [Hardware Development](#markdown-header-hardware-development)
 4. [Application Development](#markdown-header-application-development)
 
