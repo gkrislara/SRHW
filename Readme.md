@@ -16,7 +16,7 @@ For iteration 1 refer [Edge Inference of Image Super Resolution Deep Learning Mo
 * Nvidia GPU with compute capability > 6.0 with sufficient memory (>4GB) - GeForce 1050 Ti is used in this case
 * HD and UHD Monitors ( Acer KA is used) and BARCO ( for displaying results)
 * Zynq Ultrascale board ( ZCU102 is used)
-* Ethernet Cables for connectivity between systems (can be used if theres no monitor to display on host system)
+* Ethernet Cables for connectivity between systems (can be used to display on host system if there is no monitor available)
 
 ## Prerequisites
 * Knowledge on FPGA and Integrating IPs in Vivado
@@ -91,3 +91,6 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 [File](./tnq/SRHW_Quantization/ckpt)
 
 * Note: Checkpoint1_1.pt is Pytorch v1.1 version of checkpoint.pt - used in Vitis AI v1.2
+
+# Quantization
+* * *
