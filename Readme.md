@@ -28,10 +28,10 @@ For iteration 1 refer [Edge Inference of Image Super Resolution Deep Learning Mo
 
 This documentation describes the state the repo and is divided into four sections
 
-1. [Training](Readme.md#markdown-header-training)
-2. [Quantization](Readme.md#markdown-header-quantization)
-3. [Hardware Development](#markdown-header-hardware-development)
-4. [Application Development](#markdown-header-application-development)
+1. [Training](Readme.md#Training)
+2. [Quantization](Readme.md#Quantization)
+3. [Hardware Development](Readme.md#Hardware Development)
+4. [Application Development](Readme.md#Application Development)
 
 For complete information about the experiments and iterations follow [here](https://htic.atlassian.net/wiki/spaces/~11214967/pages/93487268/Daily+Work+Update) from 29/10/2020 to 15/01/2021
 
