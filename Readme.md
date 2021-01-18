@@ -30,8 +30,8 @@ This documentation describes the state the repo and is divided into four section
 
 1. [Training](#markdown-header-Training)
 2. [Quantization](#markdown-header-Quantization)
-3. [Hardware Development](#markdown-header-Hardware Development)
-4. [Application Development](#markdown-header-Application Development)
+3. [Hardware Development](#markdown-header-Hardware_Development)
+4. [Application Development](#markdown-header-Application_Development)
 
 For complete information about the experiments and iterations follow [here](https://htic.atlassian.net/wiki/spaces/~11214967/pages/93487268/Daily+Work+Update) from 29/10/2020 to 15/01/2021
 
@@ -92,5 +92,5 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 
 * Note: Checkpoint1_1.pt is Pytorch v1.1 version of checkpoint.pt - used in Vitis AI v1.2
 
-# Quantization
+## Quantization
 * * *
