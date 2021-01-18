@@ -69,11 +69,11 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 ### File Description
 * SRHW_Tensorflow.ipynb - Training code
 
-### Whats Missing in this the repo and how to get it
+### Whats Missing in this repo and how to get it
 * local wandb files with best model. Access model (tf_ckpt/model_best.h5) and wandb from above link
 
 ### Todo
-* Will be deprecated for future releases and hence become stale
+* Will be deprecated for future releases and hence becomes stale
 
 ## Datasets
 
