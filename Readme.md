@@ -19,6 +19,7 @@ For iteration 1 refer [Edge Inference of Image Super Resolution Deep Learning Mo
 * Ethernet Cables for connectivity between systems (can be used to display on host system if there is no monitor available)
 
 ## Prerequisites
+
 * Knowledge on FPGA and Integrating IPs in Vivado
 * Knowledge on Computer Architecture and Embedded Systems
 * Linux Operating system - Petalinux/Yocto
@@ -45,14 +46,17 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 [File](./tnq/SRHW_train_pytorch)
 
 ### What's done
+
 * Version v1.4
 * Trained in house to achievce PSNR: 28.33 and SSIM: 0.9296  [wandb](https://wandb.ai/krislara/SRHW/runs/3190s2ys?workspace=user-krislara)
 
 ### File Description
+
 * SRHW.ipynb - Training Code
 * pytorchtools.py - Used for Early stopping. Credits: [Bjarte](https://github.com/Bjarten/early-stopping-pytorch)
 
 ### Todo
+
 * Reduce the number of model layer and use strategies like knowledge distillation /GAN based methods to imporve accuracy
 * Split Images into patches and Super Resolve Patches, use multithreading to make processes parallel at software level. This imporves latency
 
@@ -62,17 +66,21 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 
 
 ### What's done
+
 * Version 1.15
 * Trained In-house and achieved PSNR:26.476 and SSIM:0.8882. [wandb](https://wandb.ai/krislara/SRHW_Tensorflow/runs/ndifb2q7?workspace=user-krislara)
 * Trained as an alternative for Pytorch in Vitis-AI version 1.2 since pytorch compilation did not support DPU for Edge
 
 ### File Description
+
 * SRHW_Tensorflow.ipynb - Training code
 
 ### What's missing in this repo and how to get it
+
 * local wandb files with best model. Access model (tf_ckpt/model_best.h5) and wandb from above link
 
 ### Todo
+
 * Will be deprecated for future releases and hence becomes stale
 
 ## Datasets
@@ -96,6 +104,7 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 * * *
 
 ### What's missing in this repo and how to get it
+
 * [Calibration Dataset](https://drive.google.com/drive/folders/1Zl9XrIotMKRFSj6oEtQDjWgEoSj-CZZZ?usp=sharing) - In [this](./tnq/SRHW_Quantization) directory, create a new directory calib and save it under the directory
 
 ## Pytorch
@@ -103,11 +112,13 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 [File](./tnq/SRHW_Quantization/pytorch)
 
 ### What's done
+
 * Vitis-AI version v1.3
 * Developed a quantization script which is backward compatible with v1.2
 * xir based Quanitization and Compilation which supports only VART API
 
 ### File description
+
 * torch_quantize.py - quantizer script
 * models.py - module containing models for Quantizer
 * datasets.py - module containing dataset loader for use in Quantizer script
@@ -116,18 +127,22 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 
 ### Todo
 * Works only for SRHW now ; need to update to support any model and any input/output resolution of interest
+* use Vitis-AI optimiser to reduce latency 
 
 ## Tensorflow
 
 [File](./tnq/SRHW_Quantization/tensorflow)
 
 ### What's done
+
 * Vitis-AI version v1.2
 * Used as an alterative for pytorch as pytorch compilation didnot support DPU for Edge in vitis-ai 1.2
 * used for models converted from torch and also models developed ground up in tensorflow
 * supports n2cube api only
 
+
 ### File Description
+
 * keras2tf.py - converts keras (.h5) model to tf checkpoints
 * tf_calib.py - image loader function for quantizer
 * tf_freeze_graph.py - freezes tf ckpts and produces .pb model file
@@ -139,12 +154,27 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 * conversion output - outputs of torch2tf.py
 
 ### Todo
+
 * will be deprecated for fututre versions and hence becomes stale; also the metrics are poor compared to pytorch
 
 
 ## Hardware Development
 * * * 
 
-* 
+### What's tried and what's done
+
+* Developed Hardware Platofrms using Vitis for HDMI and DP media pipeline
+* HDMI: used HDMI FRAMEBUFFER Design as the base, developed a Vitis Platform with it and integrated DPU with Custom Configuration. Visit [here](https://htic.atlassian.net/wiki/spaces/~11214967/pages/103448861/Wed+18+11+2020) for more details . Status: Bringup Complete, Pipeline set - 10 min blankout due to x11 config 
+* DP: Developed a Vitis Platform using Zynq MPSoC [base platform](https://www.xilinx.com/member/forms/download/design-license-zcu102-base.html?filename=xilinx_zcu102_base_202020_1.zip) and created custom image to support DRM. Status: Bringup Complete, Pipeline setup failed
+* Resorted to xilinx stock [image](https://www.xilinx.com/bin/public/openDownload?filename=xilinx-zcu102-dpu-v2020.2-v1.3.0.img.gz) for DPU Acceleration
+
+### Files
+
+* Platform and petalinux project files are not included . Follow [DPU-TRD](https://github.com/Xilinx/Vitis-AI/tree/master/dsa/DPU-TRD) and [Vitis Custom Embedded Platform Creation Example on ZCU104](https://github.com/Xilinx/Vitis-In-Depth-Tutorial/blob/master/Vitis_Platform_Creation/Introduction/02-Edge-AI-ZCU104/README.md) for more details
+
+### Todo
+
+* To create HDMI media pipeline in 2020.2 version and Integrate DPU
+
 ## Application Development
 * * * 
