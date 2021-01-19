@@ -34,7 +34,6 @@ This documentation describes the state of the repo and is divided into four sect
 3. Hardware Development
 4. Application Development
 
-For complete information about the experiments and iterations follow [here](https://htic.atlassian.net/wiki/spaces/~11214967/pages/93487268/Daily+Work+Update) from 29/10/2020 to 15/01/2021
 
 For How-To's and project flows and other features follow [Vitis AI User Documentation](https://www.xilinx.com/html_docs/vitis_ai/1_3/index.html) and [Vitis-AI Github](https://github.com/Xilinx/Vitis-AI)
 
