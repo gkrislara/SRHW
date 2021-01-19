@@ -27,7 +27,7 @@ For iteration 1 refer [Edge Inference of Image Super Resolution Deep Learning Mo
 * Programming Languages: Cpp - 17 and Python - 3.8+
 * Frameworks/libraries: Opencv,Numpy,Tensorflow and Pytorch
 
-This documentation describes the state the repo and is divided into four sections
+This documentation describes the state of the repo and is divided into four sections
 
 1. Training
 2. Quantization
@@ -256,4 +256,4 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 
 #### Todo
 
-* invoke fucntions in applications for displaying via DRM Pipelines
+* invoke functions in applications for displaying via DRM Pipelines
