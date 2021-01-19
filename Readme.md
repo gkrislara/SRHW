@@ -179,3 +179,81 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 ## Application Development
 * * * 
 
+### N2CUBE
+[File](./app/n2cube)
+
+#### What's done
+
+* Supports models compiled using tensorflow 1.15 compiler
+* Appplcation reads an image, DPU processes it and saves it to the disk
+* Supports v1.3 N2CUBE API
+
+#### File Description
+
+* srhw_dpu.cpp - application
+* srhw - binary
+* build.sh - compilation script
+
+#### Todo
+
+* most likely to become stale as future versions tend to support vart api
+* can be used if version 2019.2 to 2020.2 is used
+* As it gives greater flexibility at hardware level - this api can be used to optimize the design
+* Video read and multi-DPU support
+
+### VART
+
+[File](./app/vart)
+
+#### What's done
+
+* supports models compiled using xir - pytorch and tf2.0+
+* Appilcation uses multithreading to read, process and display video frames
+* backward compatible with vitis-ai 1.2 and will support future versions
+
+#### File Description
+
+* srhw_vart.cpp - application
+* srhw_vart - binary
+* build_vart.sh - compilation script
+
+#### Todo
+* As x11 donot offer flexibility, DRM pipeline needs to be created
+* Create a generalised application and convert application to library for imporving modularity so that other applications can invoke the feature
+* switching between pass thorugh and SR feature
+* coordinate dataflows with optimised data structures
+* improve code readability
+* modify build script to compile fiels given as parameters
+
+### Capture Applications
+
+[File](./app/capture)
+
+#### What's done
+
+* test applications to read and display video input
+
+#### File Description
+* test.cpp - v4l2 capture applcation Credits: Ananth
+* test_naive.cpp -naive implemetation of video file capture and display
+* test_opencv.cpp - multithreaded implemetation of video file capture and display
+* build.sh - compilation script
+
+#### Todo
+
+* Modify to read both images and video files
+
+### DRM
+[File](./app/drm)
+
+#### What's done
+
+* forked DRM display functions from xilinx
+
+#### File Description
+
+* drmhdmi.hpp - drm display functions
+
+#### Todo
+
+* invoke fucntions in applications for displaying via DRM Pipelines
