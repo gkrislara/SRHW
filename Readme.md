@@ -170,7 +170,7 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 
 ### Files
 
-* Platform and petalinux project files are not included . Follow [DPU-TRD](https://github.com/Xilinx/Vitis-AI/tree/master/dsa/DPU-TRD) and [Vitis Custom Embedded Platform Creation Example on ZCU104](https://github.com/Xilinx/Vitis-In-Depth-Tutorial/blob/master/Vitis_Platform_Creation/Introduction/02-Edge-AI-ZCU104/README.md) for more details
+* Platform and petalinux project files are not included as they take up more space . Follow [DPU-TRD](https://github.com/Xilinx/Vitis-AI/tree/master/dsa/DPU-TRD) and [Vitis Custom Embedded Platform Creation Example on ZCU104](https://github.com/Xilinx/Vitis-In-Depth-Tutorial/blob/master/Vitis_Platform_Creation/Introduction/02-Edge-AI-ZCU104/README.md) for more details
 
 ### Todo
 
@@ -178,3 +178,4 @@ For How-To's and project flows and other features follow [Vitis AI User Document
 
 ## Application Development
 * * * 
+
